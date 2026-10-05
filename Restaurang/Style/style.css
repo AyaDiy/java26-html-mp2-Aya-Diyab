@@ -1,0 +1,158 @@
+:root {
+    --latte: rgb(143, 124, 111);
+    --coffee: #654321;
+    --espresso: rgb(88, 55, 24);
+    --cappuccino: #ac9584;
+    --line: rgb(115, 106, 106);
+    --background: rgba(255, 255, 255, 0.8);
+}
+
+/* head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+} */
+
+head img {
+    width: 20px;
+    height: 5px;
+}
+
+body {
+    background-color: var(--latte);
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    padding: 10px;
+}
+
+nav a {
+    background-color: var(--coffee);
+    color: white;
+    text-decoration: none; /* normal stil */
+
+    padding: 12px 25px;
+    border-radius: 10px;
+
+    font-weight: bold; /* fet stil */
+    transition: 0.3s; 
+}
+
+nav a:hover {
+    background-color: var(--cappuccino); /*Ändra färgen när muspekaren är på*/
+    color: var(--coffee);
+    transform: translateY(-3px); /* gör att knappen flyttar */
+}
+
+img {
+    padding: 0;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.welcome-text {
+    position: absolute;
+    left: 75px;
+    bottom: 70%;
+    transform: translateY(-50%);
+    color: var(--coffee);
+
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(-100px, -50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, -50%);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 700px) {
+    .welcome-text {
+        left: 20px;
+        bottom: 40%;
+        width: 30%;
+        text-align: left;
+        font-size: 10x;
+        color: var(--coffee);
+    }
+
+    .restaurant-text h1  {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .restaurant-text p {
+        font-size: 16px;
+    }
+   
+}
+
+.restaurant-info {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    padding: 30px;
+    background-color: var(--cappuccino);
+    border-radius: 20px;
+}
+
+.restaurant-text {
+    font-size: 20px;
+
+} 
+
+.restaurant-text h1 {
+    color: var(--coffee);
+    margin-bottom: 15px;
+}
+
+
+footer {
+    border-top: 10px;
+    text-align: left;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--cappuccino);
+}
+
+.footer-section a {
+    color: black;
+    text-decoration: none;
+    font-family: Georgia, serif;
+
+}
+
+.footer-section strong {
+    color: var(--espresso);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 0;
+}
+
+.inre-footer {
+    padding: 5px;
+}

@@ -1,0 +1,112 @@
+
+:root {
+    --latte: rgb(143, 124, 111);
+    --coffee: #654321;
+    --cappuccino: #ac9584;
+    --line: rgb(115, 106, 106);
+}
+
+body {
+    background-color: var(--latte);
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    padding: 10px;
+}
+
+nav a {
+    background-color: var(--coffee);
+    color: white;
+    text-decoration: none; /* normal stil */
+
+    padding: 12px 25px;
+    border-radius: 10px;
+
+    font-weight: bold; /* fet stil */
+    transition: 0.3s; 
+}
+
+nav a:hover {
+    background-color: var(--cappuccino); /*Ändra färgen när muspekaren är på*/
+    color: var(--coffee);
+    transform: translateY(-3px); /* gör att knappen flyttar */
+}
+
+.bokningssystem {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+form {
+    width: 90%;
+    max-width: 1000px;
+    min-height: 80vh;
+
+    padding: 50px;
+
+    background: var(--cappuccino);
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select, button {
+  padding: 10px;
+  margin:0.4rem;
+}
+
+button {
+  display:block-inline;
+  position: relative;  
+  margin-top: 8px;
+  width:100%;
+  color: white;
+  background: var(--coffee);
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+footer {
+    border-top: 10px;
+    text-align: left;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--cappuccino);
+}
+
+.footer-section a {
+    color: black;
+    text-decoration: none;
+    font-family: Georgia, serif;
+
+}
+
+.footer-section strong {
+    color: var(--espresso);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 0;
+}
+
+.inre-footer {
+    padding: 5px;
+}
